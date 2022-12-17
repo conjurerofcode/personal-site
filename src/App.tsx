@@ -9,11 +9,14 @@ interface IApplicationProps {}
 
 const App: React.FC<IApplicationProps> = () => {
   return (
-    <Routes>
-      {/* <Header /> */}
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <div>
+      <Header />
+      <Routes>
+        {/* <Header /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
   );
 };
 
