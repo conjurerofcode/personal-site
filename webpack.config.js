@@ -1,5 +1,5 @@
 const prod = process.env.NODE_ENV === "production";
-
+var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -8,6 +8,7 @@ module.exports = {
   entry: "./src/index.tsx",
   output: {
     path: __dirname + "/dist/",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -24,6 +25,9 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   devtool: prod ? undefined : "source-map",
   plugins: [

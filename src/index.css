@@ -1,3 +1,26 @@
 body {
-  color: blue;
+  color: green;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dark-theme a:hover {
+  color: #ccc;
+}
+
+.dark-theme header,
+.dark-theme footer {
+  padding: 1em;
+}
+
+.dark-theme main {
+  padding: 1em;
 }
