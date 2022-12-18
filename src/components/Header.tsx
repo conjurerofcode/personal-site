@@ -1,16 +1,32 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
-  return (
-    <div className="dark-theme rounded">
-      <h1>Michael Moore</h1>
-      <nav>
-        <span> | </span>
-        <a href="/">Home</a>
-        <span> | </span>
-        <a href="/about">About</a>
-      </nav>
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
+  window.addEventListener("load", handleLoad);
+  return isLoading ? (
+    <div className="dark-theme"></div>
+  ) : (
+    <div className="dark-theme rounded header">
+      <h1 className="title">
+        <a href="/" id="noHover">
+          Michael Moore
+        </a>
+      </h1>
+      <div className="links">
+        <nav>
+          <a href="/">Home</a>
+          <span> | </span>
+          <a href="/about">About</a>
+          <span> | </span>
+          <a href="/portfolio">Portfolio</a>
+        </nav>
+      </div>
     </div>
   );
 };

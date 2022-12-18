@@ -1,3 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  /* this makes sure the padding and the border is included in the box sizing */
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  overflow-y: inherit;
+}
+
+body {
+  background-color: #333;
+}
+
 .dark-theme {
   background-color: #333;
   color: #fff;
@@ -6,6 +28,7 @@
 .dark-theme a {
   color: #fff;
   text-decoration: none;
+  margin: 20px;
 }
 
 .dark-theme a:hover {
@@ -23,4 +46,31 @@
 
 .rounded {
   border-radius: 0.5em;
+}
+
+.page {
+  top: -10%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: -2px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  display: inline-block;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+.links {
+  display: inline-block;
+}
+
+#noHover:hover {
+  background-color: unset;
+  color: unset;
 }

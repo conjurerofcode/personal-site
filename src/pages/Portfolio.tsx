@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const About = () => {
+interface PortfolioProps {}
+
+const Portfolio: React.FC<PortfolioProps> = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleLoad = () => {
@@ -12,10 +14,10 @@ const About = () => {
   return isLoading ? (
     <></>
   ) : (
-    <div className="dark-theme">
-      <h1>About me</h1>
+    <div className="dark-theme page">
+      <h1>Portfolio</h1>
     </div>
   );
 };
 
-export default About;
+export default Portfolio;
