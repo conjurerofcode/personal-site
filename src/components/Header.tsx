@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import { Link } from "react-router-dom";
+import Menu from "./Menu";
 
 const Header: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -9,26 +10,53 @@ const Header: React.FC = () => {
   };
 
   window.addEventListener("load", handleLoad);
-  return isLoading ? (
-    <div className="dark-theme"></div>
-  ) : (
-    <div className="dark-theme rounded header">
-      <h1 className="title">
+  return (
+    <div style={headerStyle}>
+      <h1 style={titleStyle}>
         <a href="/" id="noHover">
-          Michael Moore
+          MxM
         </a>
       </h1>
-      <div className="links">
-        <nav>
-          <a href="/">Home</a>
-          <span> | </span>
-          <a href="/about">About</a>
-          <span> | </span>
-          <a href="/portfolio">Portfolio</a>
-        </nav>
-      </div>
+      <ul style={linkStyle} id="noHover">
+        <li>
+          <Link to="/">Home</Link>
+          {/* <a href="/">Home</a> */}
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+          {/* <a href="/about">About</a> */}
+        </li>
+        <li>
+          <Link to="/portfolio">Portfolio</Link>
+          {/* <a href="/portfolio">Portfolio</a> */}
+        </li>
+        <li>
+          <Link to="/experiment">Experiment</Link>
+          {/* <a href="/experiment">Experiment</a> */}
+        </li>
+      </ul>
     </div>
   );
+};
+
+const titleStyle: CSSProperties = {
+  color: "white",
+  background: "transparent",
+  display: "inline-block",
+};
+
+const headerStyle: CSSProperties = {
+  position: "sticky",
+  top: "0px",
+  display: "flex",
+  alignItems: " center",
+};
+
+const linkStyle: CSSProperties = {
+  background: "transparent",
+  listStyle: "none",
+  display: "flex",
+  flexDirection: "row",
 };
 
 export default Header;

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Header from "./components/Header";
+import Experiment from "./pages/Experiment";
 
 interface IApplicationProps {}
 
@@ -16,6 +17,7 @@ const App: React.FC<IApplicationProps> = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/experiment" element={<Experiment />} />
       </Routes>
     </div>
   );

@@ -5,15 +5,17 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 
-// const container = document.getElementById("app-root")!;
-// const root = createRoot(container);
-// root.render(<App />);
-
-ReactDOM.render(
+const container = document.getElementById("root")!;
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
+
+// ReactDOM.createRoot(
+
+//   document.getElementById("root")
+// );

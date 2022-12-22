@@ -1,17 +1,7 @@
 import React, { useState } from "react";
 
 const About = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
-  window.addEventListener("load", handleLoad);
-
-  return isLoading ? (
-    <></>
-  ) : (
+  return (
     <div className="dark-theme">
       <h1>About me</h1>
     </div>

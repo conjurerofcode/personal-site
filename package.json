@@ -32,6 +32,8 @@
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
+    "framer-motion": "^7.10.3",
+    "image-webpack-loader": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.5.0"

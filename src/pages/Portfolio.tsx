@@ -3,17 +3,7 @@ import React, { useState } from "react";
 interface PortfolioProps {}
 
 const Portfolio: React.FC<PortfolioProps> = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-  };
-
-  window.addEventListener("load", handleLoad);
-
-  return isLoading ? (
-    <></>
-  ) : (
+  return (
     <div className="dark-theme page">
       <h1>Portfolio</h1>
     </div>
